@@ -18,7 +18,7 @@ export type itemsTypes = {
 };
 
 export interface ShopProps {
-  onAddItemToCart: (id: string) => void;
+  children: React.ReactNode;
 }
 
 export interface ProductProps {
