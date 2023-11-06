@@ -27,16 +27,19 @@ export interface ProductProps {
   title: string;
   price: number;
   description: string;
-  onAddToCart: (id: string) => void;
 }
 
-export interface CartProps {
+export interface CartContextProps {
   items: {
     id: string;
     name: string;
     price: number;
     quantity: number;
   }[];
+  addItemToCart: (id: string) => void;
+}
+
+export interface CartProps {
   onUpdateItemQuantity: (productId: string, amount: number) => void;
 }
 

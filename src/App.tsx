@@ -5,6 +5,8 @@ import Shop from './components/Shop';
 import Product from './components/Product.js';
 import { DUMMY_PRODUCTS } from './dummy-products.js';
 
+import { CartContext } from './store/shopping-cart-context.js';
+
 import { shoppingCartTypes } from './types.js';
 
 function App() {
@@ -13,11 +15,11 @@ function App() {
   });
 
   function handleAddItemToCart(id: string) {
-    setShoppingCart((prevShoppingCart) => {
+    setShoppingCart(prevShoppingCart => {
       const updatedItems = [...prevShoppingCart.items];
 
       const existingCartItemIndex = updatedItems.findIndex(
-        (cartItem) => cartItem.id === id
+        cartItem => cartItem.id === id
       );
       const existingCartItem = updatedItems[existingCartItemIndex];
 
@@ -28,7 +30,7 @@ function App() {
         };
         updatedItems[existingCartItemIndex] = updatedItem;
       } else {
-        const product = DUMMY_PRODUCTS.find((product) => product.id === id);
+        const product = DUMMY_PRODUCTS.find(product => product.id === id);
         updatedItems.push({
           id: id,
           name: product!.title,
@@ -44,10 +46,10 @@ function App() {
   }
 
   function handleUpdateCartItemQuantity(productId: string, amount: number) {
-    setShoppingCart((prevShoppingCart) => {
+    setShoppingCart(prevShoppingCart => {
       const updatedItems = [...prevShoppingCart.items];
       const updatedItemIndex = updatedItems.findIndex(
-        (item) => item.id === productId
+        item => item.id === productId
       );
 
       const updatedItem = {
@@ -68,20 +70,25 @@ function App() {
     });
   }
 
+  const ctxValue = {
+    items: shoppingCart.items,
+    addItemToCart: handleAddItemToCart,
+  };
+
   return (
-    <>
+    <CartContext.Provider value={ctxValue}>
       <Header
         cart={shoppingCart}
         onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
       />
-      <Shop >
-        {DUMMY_PRODUCTS.map((product) => (
+      <Shop>
+        {DUMMY_PRODUCTS.map(product => (
           <li key={product.id}>
-            <Product {...product} onAddToCart={handleAddItemToCart} />
+            <Product {...product} />
           </li>
         ))}
       </Shop>
-    </>
+    </CartContext.Provider>
   );
 }
 
