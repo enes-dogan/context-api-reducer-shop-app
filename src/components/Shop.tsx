@@ -1,6 +1,6 @@
-import { ShopProps } from '../types';
+import { childrenProp } from '../types';
 
-export default function Shop({ children }: ShopProps) {
+export default function Shop({ children }: childrenProp) {
   return (
     <section id="shop">
       <h2>Elegant Clothing For Everyone</h2>

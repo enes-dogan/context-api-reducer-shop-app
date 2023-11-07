@@ -17,7 +17,7 @@ export type itemsTypes = {
   quantity: number;
 };
 
-export interface ShopProps {
+export interface childrenProp {
   children: React.ReactNode;
 }
 
