@@ -5,4 +5,5 @@ import { CartContextProps } from '../types';
 export const CartContext = createContext<CartContextProps>({
   items: [],
   addItemToCart: () => { },
+  updateCartItems: () => { },
 });
