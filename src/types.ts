@@ -37,25 +37,14 @@ export interface CartContextProps {
     quantity: number;
   }[];
   addItemToCart: (id: string) => void;
-  updateCartItems: (id: string, amount: number) => void;
+  updateItemQuantity: (id: string, amount: number) => void;
 }
-
-// export interface CartProps {
-//   onUpdateItemQuantity: (productId: string, amount: number) => void;
-// }
 
 export type modaRefProps = {
   open: () => void;
 };
 
-// type handleUpdateCartItemQuantity = (id: string, quantity: number) => void;
 export interface CartModalProps {
-  // onUpdateCartItemQuantity: handleUpdateCartItemQuantity;
   title: string;
   actions: React.ReactNode;
 }
-
-// export interface HeaderProps {
-//   cart: shoppingCartTypes;
-//   onUpdateCartItemQuantity: handleUpdateCartItemQuantity;
-// }

@@ -5,10 +5,7 @@ import Cart from './Cart';
 
 import { CartModalProps } from '../types';
 
-const CartModal = forwardRef((
-  { title, actions }: CartModalProps,
-  ref
-) => {
+const CartModal = forwardRef(({ title, actions }: CartModalProps, ref) => {
   const dialog = useRef<HTMLDialogElement>(null);
 
   useImperativeHandle(ref, () => {
