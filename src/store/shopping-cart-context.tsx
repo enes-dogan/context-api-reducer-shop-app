@@ -1,9 +1,10 @@
 import { createContext, useReducer } from 'react';
 
-import { DUMMY_PRODUCTS } from '../dummy-products.js';
-import { childrenProp } from '../types.ts';
+import { DUMMY_PRODUCTS } from '../dummy-products';
+
+import { childrenProp } from '../types';
 import { CartContextProps } from '../types';
-import { shoppingCartTypes } from '../types.ts';
+import { shoppingCartTypes } from '../types';
 import { shoppingCartReducerActionType } from '../types';
 
 export const CartContext = createContext<CartContextProps>({

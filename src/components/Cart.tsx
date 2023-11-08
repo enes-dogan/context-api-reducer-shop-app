@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { CartContext } from '../store/shopping-cart-context';
 
-export default function Cart() {
+const Cart = () => {
   const { items, updateItemQuantity } = useContext(CartContext);
 
   const totalPrice = items.reduce(
@@ -42,3 +42,5 @@ export default function Cart() {
     </div>
   );
 }
+
+export default Cart;

@@ -1,13 +1,13 @@
+export interface childrenProp {
+  children: React.ReactNode;
+}
+
 export type ProductTypes = {
   id: string;
   image: string;
   title: string;
   price: number;
   description: string;
-};
-
-export type shoppingCartTypes = {
-  items: itemsTypes[];
 };
 
 export type itemsTypes = {
@@ -17,25 +17,11 @@ export type itemsTypes = {
   quantity: number;
 };
 
-export interface childrenProp {
-  children: React.ReactNode;
-}
+export type shoppingCartTypes = {
+  items: itemsTypes[];
+};
 
-export interface ProductProps {
-  id: string;
-  image: string;
-  title: string;
-  price: number;
-  description: string;
-}
-
-export interface CartContextProps {
-  items: {
-    id: string;
-    name: string;
-    price: number;
-    quantity: number;
-  }[];
+export interface CartContextProps extends shoppingCartTypes {
   addItemToCart: (id: string) => void;
   updateItemQuantity: (id: string, amount: number) => void;
 }

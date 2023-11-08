@@ -1,11 +1,11 @@
 import { useRef, useContext } from 'react';
+import { CartContext } from '../store/shopping-cart-context';
 
-import { CartContext } from '../store/shopping-cart-context.js';
-import CartModal from './CartModal.jsx';
+import CartModal from './CartModal';
 
-import { modaRefProps } from '../types.js';
+import { modaRefProps } from '../types';
 
-export default function Header() {
+const Header = () => {
   const { items } = useContext(CartContext);
   const modal = useRef<modaRefProps>(null);
 
@@ -41,3 +41,5 @@ export default function Header() {
     </>
   );
 }
+
+export default Header;

@@ -1,12 +1,12 @@
+import { DUMMY_PRODUCTS } from './dummy-products';
+
+import CartContextProvider from './store/shopping-cart-context';
+
 import Header from './components/Header';
 import Shop from './components/Shop';
-import Product from './components/Product.js';
+import Product from './components/Product';
 
-import { DUMMY_PRODUCTS } from './dummy-products.js';
-
-import CartContextProvider from './store/shopping-cart-context.js';
-
-function App() {
+const App = () => {
   return (
     <CartContextProvider>
       <Header />

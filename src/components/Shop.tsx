@@ -1,6 +1,6 @@
 import { childrenProp } from '../types';
 
-export default function Shop({ children }: childrenProp) {
+const Shop = ({ children }: childrenProp) => {
   return (
     <section id="shop">
       <h2>Elegant Clothing For Everyone</h2>
@@ -9,3 +9,5 @@ export default function Shop({ children }: childrenProp) {
     </section>
   );
 }
+
+export default Shop;
