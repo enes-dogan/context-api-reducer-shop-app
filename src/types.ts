@@ -48,3 +48,7 @@ export interface CartModalProps {
   title: string;
   actions: React.ReactNode;
 }
+
+export type shoppingCartReducerActionType =
+  | { type: 'ADD_ITEM'; payload: string }
+  | { type: 'UPDATE_ITEM'; payload: { productId: string; amount: number } };
