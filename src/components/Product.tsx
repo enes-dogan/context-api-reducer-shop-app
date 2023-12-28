@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { CartContext } from '../store/shopping-cart-context';
+import { CartContext } from '../store/shopping-cart-context.tsx';
 
-import { ProductTypes } from '../types';
+import { ProductTypes } from '../types.ts';
 
 const Product = ({ id, image, title, price, description }: ProductTypes) => {
   const { addItemToCart } = useContext(CartContext);

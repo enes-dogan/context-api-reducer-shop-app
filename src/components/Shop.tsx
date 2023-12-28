@@ -1,4 +1,4 @@
-import { childrenProp } from '../types';
+import { childrenProp } from '../types.ts';
 
 const Shop = ({ children }: childrenProp) => {
   return (
@@ -8,6 +8,6 @@ const Shop = ({ children }: childrenProp) => {
       <ul id="products">{children}</ul>
     </section>
   );
-}
+};
 
 export default Shop;

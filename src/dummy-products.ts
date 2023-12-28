@@ -5,7 +5,7 @@ import merlotSuit from './assets/merlot-suit.jpg';
 import moonlightDress from './assets/moonlight-dress.jpg';
 import denimPioneer from './assets/denim-pioneer.jpg';
 
-import { ProductTypes } from './types';
+import { ProductTypes } from './types.ts';
 
 export const DUMMY_PRODUCTS: ProductTypes[] = [
   {

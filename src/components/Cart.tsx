@@ -29,7 +29,9 @@ const Cart = () => {
                     -
                   </button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => updateItemQuantity(item.id, 1)}>+</button>
+                  <button onClick={() => updateItemQuantity(item.id, 1)}>
+                    +
+                  </button>
                 </div>
               </li>
             );
@@ -41,6 +43,6 @@ const Cart = () => {
       </p>
     </div>
   );
-}
+};
 
 export default Cart;

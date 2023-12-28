@@ -1,10 +1,10 @@
-import { DUMMY_PRODUCTS } from './dummy-products';
+import { DUMMY_PRODUCTS } from './dummy-products.ts';
 
-import CartContextProvider from './store/shopping-cart-context';
+import CartContextProvider from './store/shopping-cart-context.tsx';
 
-import Header from './components/Header';
-import Shop from './components/Shop';
-import Product from './components/Product';
+import Header from './components/Header.tsx';
+import Shop from './components/Shop.tsx';
+import Product from './components/Product.tsx';
 
 const App = () => {
   return (
@@ -19,6 +19,6 @@ const App = () => {
       </Shop>
     </CartContextProvider>
   );
-}
+};
 
 export default App;

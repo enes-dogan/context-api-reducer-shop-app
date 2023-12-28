@@ -1,16 +1,18 @@
 import { createContext, useReducer } from 'react';
 
-import { DUMMY_PRODUCTS } from '../dummy-products';
+import { DUMMY_PRODUCTS } from '../dummy-products.ts';
 
-import { childrenProp } from '../types';
-import { CartContextProps } from '../types';
-import { shoppingCartTypes } from '../types';
-import { shoppingCartReducerActionType } from '../types';
+import {
+  childrenProp,
+  CartContextProps,
+  shoppingCartTypes,
+  shoppingCartReducerActionType,
+} from '../types.ts';
 
 export const CartContext = createContext<CartContextProps>({
   items: [],
-  addItemToCart: () => { },
-  updateItemQuantity: () => { },
+  addItemToCart: () => {},
+  updateItemQuantity: () => {},
 });
 
 function shoppingCartReducer(

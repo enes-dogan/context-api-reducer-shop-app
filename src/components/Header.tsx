@@ -1,9 +1,9 @@
 import { useRef, useContext } from 'react';
-import { CartContext } from '../store/shopping-cart-context';
+import { CartContext } from '../store/shopping-cart-context.tsx';
 
-import CartModal from './CartModal';
+import CartModal from './CartModal.tsx';
 
-import { modaRefProps } from '../types';
+import { modaRefProps } from '../types.ts';
 
 const Header = () => {
   const { items } = useContext(CartContext);
@@ -40,6 +40,6 @@ const Header = () => {
       </header>
     </>
   );
-}
+};
 
 export default Header;
